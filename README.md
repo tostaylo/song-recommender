@@ -1,10 +1,34 @@
-## Programming in Scala for Big Data Systems, Spring 2022
+# Song Recommender
 
-Scala Project for Harvard Extension course CSCI-E88C, Spring, 2022. See <https://courses.dce.harvard.edu/?details&srcdb=202202&crn=26278> for more details.
+A song recommendation engine build with Apache Kafka Streams and Scala
 
 The project requires Java 8 or Java 11, Scala 2.13 and sbt 1.5.2+ environment to run.
 
-### Getting started
+## Getting Started
+
+### To run this project
+
+1. Start Kafka
+
+    In the `docker/kafka` directory run `docker-compose up -d`
+
+2. Start the kafka streams application 
+
+    `sbt "runMain recommender.SongRecommender"`
+
+3. Start a producer to produce messages to the input topic a song id can be found in the `main/resources/data/spotify_songs.csv` file.
+
+   `kcat -b localhost:9092 -t song-input-topic -K: -P << EOF
+    1:{song id here}
+    EOF`
+
+4. Shutdown all containers
+
+    `docker compose down`
+
+5. The recommended song will be found in `main/resources/data/output/recommended_song.csv`
+
+### Useful commands
 
  Use the following commands to get started with your project
 
@@ -39,19 +63,8 @@ For test files.
 
 `sbt "test:scalafix RemoveUnused"`
 
-### Git
-
-- `git pull upstream main`
-- `git push origin main`
-
 ### Testing
 
 - `sbt "test:testOnly *your-test-name"` runs all tests of the name given (could be many projects)
 - `sbt "testOnly *.project-name.*"` runs a project
 - `sbt "testOnly recommender.MainAppTest"` runs the exact test given
-
-### License
-
-Copyright 2022, Edward Sumitra
-
-Licensed under the MIT License.

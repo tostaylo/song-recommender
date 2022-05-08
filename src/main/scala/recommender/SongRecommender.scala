@@ -12,7 +12,6 @@ import org.apache.kafka.streams.scala._
 import org.apache.kafka.streams.scala.kstream._
 import org.apache.kafka.streams.{ KafkaStreams, StreamsConfig }
 
-// run with: sbt "runMain recommender.SongRecommender"
 object SongRecommender {
 
   implicit class CSVWrapper(val prod: Product) extends AnyVal {
@@ -49,15 +48,11 @@ object SongRecommender {
     val builder: StreamsBuilder = new StreamsBuilder
     val textLines: KStream[String, String] =
       builder.stream[String, String]("song-input-topic")
-
     val rawSongs = Song
       .readFromCSVFile(
         "src/main/resources/data/spotify_songs.csv"
       )
-
     val csvHeader = rawSongs(0)
-
-    // the first song is the top row of the csv
     val songs = rawSongs
       .drop(1)
 

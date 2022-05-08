@@ -61,7 +61,8 @@ kafka-producer-perf-test --producer-props bootstrap.servers=broker1:9092 --topic
 kafka-producer-perf-test --producer-props bootstrap.servers=broker1:9092 --topic orders --throughput 1  --num-records 10 --payload-file /opt/kafka-data/sample-transactions.txt
 ```
 
-## Steps to run the kafka streams demo application
+## Steps to run the kafka streams application
+
 1. Start kafka
 2. Start the kafka streams application
 3. Start a consumer to print messages in the result topic
