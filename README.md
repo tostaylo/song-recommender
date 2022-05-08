@@ -2,7 +2,13 @@
 
 A song recommendation engine build with Apache Kafka Streams and Scala
 
-The project requires Java 8 or Java 11, Scala 2.13 and sbt 1.5.2+ environment to run.
+The project requires 
+
+- Java 8 or Java 11 
+
+- Scala 2.13 and sbt 1.5.2+ environment to run.
+
+- kcat https://github.com/edenhill/kcat
 
 ## Getting Started
 
@@ -16,7 +22,7 @@ The project requires Java 8 or Java 11, Scala 2.13 and sbt 1.5.2+ environment to
 
     `sbt "runMain recommender.SongRecommender"`
 
-3. Start a producer to produce messages to the input topic a song id can be found in the `main/resources/data/spotify_songs.csv` file.
+3. Start a producer to produce messages to the input topic. A song id can be found in the `main/resources/data/spotify_songs.csv` file.
 
    `kcat -b localhost:9092 -t song-input-topic -K: -P << EOF
     1:{song id here}
