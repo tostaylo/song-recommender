@@ -25,7 +25,7 @@ The project requires
 3. Start a producer to produce messages to the input topic. A song id can be found in the `main/resources/data/spotify_songs.csv` file.
 
    `kcat -b localhost:9092 -t song-input-topic -K: -P << EOF
-    1:{song id here}
+    1:songIdHere
     EOF`
 
 4. Shutdown all containers
