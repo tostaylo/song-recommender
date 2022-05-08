@@ -1,2 +1,0 @@
-track_id,track_name,track_artist,track_popularity,track_album_id,track_album_name,track_album_release_date,playlist_name,playlist_id,playlist_genre,playlist_subgenre,danceability,energy,key,loudness,mode,speechiness,acousticness,instrumentalness,liveness,valence,tempo,duration_ms
-2RaA6kIcvomt77qlIgGhCT,Breaking the Law,Judas Priest,69,5bqtZRbUZUxUps8mrO9tGY,British Steel,1980,Hard Rock Cafe Classics,3sv5ViKoPDNnZRsklzEGMN,rock,hard rock,0.362,0.961,2,-5.664,1,0.0857,0.024,9.35e-6,0.159,0.491,164.019,153840

@@ -63,7 +63,7 @@ object SongRecommender {
 
     textLines.foreach { (count, songId) =>
       writeFile(
-        "src/main/resources/data/input-topics.log.txt",
+        "src/main/resources/data/output/input_topics.log.txt",
         List(s"count: ${count} | id: ${songId}")
       )
 
@@ -87,18 +87,18 @@ object SongRecommender {
           sameGenreSongs.find(_.id == similarSongs(0)._1).get
 
         writeFile(
-          "src/main/resources/data/recommended_song.csv",
+          "src/main/resources/data/output/recommended_song.csv",
           List(csvHeader.toCSV(), recommendedSong.toCSV())
         )
         writeFile(
-          "src/main/resources/data/found_song.csv",
+          "src/main/resources/data/output/found_song.csv",
           List(csvHeader.toCSV(), foundSong.toCSV())
         )
       }
       else {
         // Error Logging can be monitored by cloud architecture
         writeFile(
-          "src/main/resources/data/errors.log.txt",
+          "src/main/resources/data/output/errors.log.txt",
           List(s"Song id: ${songId} was not found")
         )
       }
