@@ -1,0 +1,2 @@
+track_id,track_name,track_artist,track_popularity,track_album_id,track_album_name,track_album_release_date,playlist_name,playlist_id,playlist_genre,playlist_subgenre,danceability,energy,key,loudness,mode,speechiness,acousticness,instrumentalness,liveness,valence,tempo,duration_ms
+4Ut80ggQbyiJN2pGCs7VfB,Steambreather,Mastodon,52,1VzmKgEG38fsUBZVe15wuF,Emperor of Sand,2017-03-31,Hard Rock Workout,6kXNv8J3HCYztxjOIUzApv,rock,hard rock,0.358,0.981,2,-4.572,1,0.116,4.1e-5,6.74e-4,0.184,0.262,165.027,303107
