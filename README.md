@@ -74,3 +74,8 @@ For test files.
 - `sbt "test:testOnly *your-test-name"` runs all tests of the name given (could be many projects)
 - `sbt "testOnly *.project-name.*"` runs a project
 - `sbt "testOnly recommender.MainAppTest"` runs the exact test given
+
+
+### Project walkthrough for MVP
+
+[Youtube walkthrough](https://www.youtube.com/watch?v=DyHWdd0oyME)
