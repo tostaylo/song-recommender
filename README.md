@@ -42,6 +42,7 @@ The project requires
 - Create a "fat" jar: `sbt assembly`
 - Run tests: `sbt test`
 - To install in local repo: `sbt publishLocal`
+- To execute 'fat' jar : `java -cp target/scala-2.13/SongRecommender-assembly-0.1.0-SNAPSHOT.jar recommender.SongRecommender`
 
 ### Static Analysis Tools
 
