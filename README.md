@@ -20,7 +20,7 @@ The project requires
 
 2. Start the kafka streams application 
 
-    `sbt "runMain recommender.SongRecommender"`
+    `sbt "runMain recommender.SongRecommender"` or `sbt run`
 
 3. Start a producer to produce messages to the input topic. A song id can be found in the `main/resources/data/spotify_songs.csv` file.
 
