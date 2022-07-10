@@ -4,6 +4,9 @@ ThisBuild / scalaVersion := "2.13.6"
 ThisBuild / semanticdbEnabled := true // enable SemanticDB
 ThisBuild / semanticdbVersion := scalafixSemanticdb.revision // use Scalafix compatible version
 
+// set the main class for the main 'sbt run' task
+mainClass in (Compile, run) := Some("recommender.SongRecommender")
+
 lazy val root = (project in file(".")).settings(
   name := "SongRecommender",
   scalacOptions ++= Seq(
