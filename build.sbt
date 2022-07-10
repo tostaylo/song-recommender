@@ -5,7 +5,7 @@ ThisBuild / semanticdbEnabled := true // enable SemanticDB
 ThisBuild / semanticdbVersion := scalafixSemanticdb.revision // use Scalafix compatible version
 
 lazy val root = (project in file(".")).settings(
-  name := "2022SpringScalaIntro",
+  name := "SongRecommender",
   scalacOptions ++= Seq(
     "-feature",
     "-deprecation",
@@ -19,6 +19,7 @@ lazy val root = (project in file(".")).settings(
   assembly / assemblyMergeStrategy := {
     case PathList("META-INF", xs @ _*) => MergeStrategy.discard
     case "application.conf"            => MergeStrategy.concat
+    case PathList("module-info.class") => MergeStrategy.discard
     case x =>
       val oldStrategy = (assembly / assemblyMergeStrategy).value
       oldStrategy(x)

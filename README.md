@@ -8,7 +8,7 @@ The project requires
 
 - Scala 2.13 and sbt 1.5.2+ environment to run.
 
-- kcat https://github.com/edenhill/kcat
+- [kcat](https://github.com/edenhill/kcat)
 
 ## Getting Started
 
